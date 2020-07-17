@@ -23,7 +23,7 @@ save(segD, meta, file=file.path(segLocation ,paste0("segD_chlamy_segmentation_",
 Analyses quality of segmentation producing a variety of graphs
 ```
 in: "segD_chlamy_segmentation_multi200_gap100.RData"
-out: only plots??
+out: various plots
 ```
 
 ### Segmentation_Analysis_post_selection.R
@@ -45,7 +45,6 @@ gitdir, "Summary_of_Data.csv"
 source(file.path(gitdir, "Scripts/chlamy_source_code.R"))
 inputdata <- "segD_chlamy_segmentation_LociRun2018_multi200_gap100.RData" #14390
 aDfile    <- "aD_chlamy_segmentation_LociRun2018_multi200_gap100.RData"
-"transposon_annotations.Rdata"
 out:
 save(gr, meta, metawt, loci, baseDir, prefix, saveLocation, file = file.path(saveLocation, paste0("gr_fdr", fdr,  ".RData")))
 export.gff3(gr, con = file.path(saveLocation, paste0("loci_fdr", fdr, prefix, ".gff")))
@@ -73,7 +72,6 @@ in:
 gitdir,"Annotation2Use.csv"
 inputFile <- "gr_fdr0.05.RData"
 lociRun <- "LociRun2018_multi200_gap100_90c7213"
-#baseDir <- "C:/Users/Nick/Documents/PhD/Projects/Chlamy"
 # Specify location of annotation outputs
 inputLocation <- file.path(baseDir, "segmentation_2018", MCAOutputs)
 lociLocation <- file.path(baseDir, "segmentation_2018", lociRun)
